@@ -1,0 +1,163 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  min-height: 120vh;
+  width: 100vw;
+  font-size: 12px;
+  color: hsl(238, 29%, 16%);
+  font-family: "Kumbh Sans", sans-serif;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    0deg,
+    hsl(240, 73%, 65%),
+    hsl(273, 75%, 66%)
+  );
+}
+.illustration-box {
+  display: none;
+}
+.icon-arrow-rotate {
+  transform: rotate(180deg);
+}
+.accordion {
+  background-color: transparent;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+}
+.accordion:focus {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+.panel {
+  margin-bottom: 10px;
+  max-width: 100%;
+  background-color: white;
+  max-height: 0;
+  color: hsl(240, 6%, 50%);
+  overflow: hidden;
+  text-align: left;
+  padding: 0px 5px 0px 0px;
+  transition: max-height 0.2s ease-out;
+}
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.illustration-woman-mobile {
+  position: relative;
+  top: -115px;
+  width: 80%;
+  margin-bottom: -50px;
+}
+.illustration-woman-desktop {
+  display: none;
+}
+.illustration-woman-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.illustration-box {
+  display: none;
+}
+.body-container {
+  max-width: 300px;
+  border-radius: 12px;
+  padding: 17px;
+  padding-bottom: 50px;
+  background-image: url("./images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 40px 0px;
+  background-size: 220px 100px;
+  background-color: white;
+}
+@media screen and (min-width: 425px) {
+  body {
+    min-height: 140vh;
+  }
+  .body-container {
+    max-width: 400px;
+    background-size: 290px 100px;
+    background-size: 75%;
+    background-position: 45px 10px;
+  }
+  .illustration-woman-mobile {
+    top: -145px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+  }
+  .body-container {
+    display: flex;
+    max-width: 800px;
+    min-height: 400px;
+    overflow: hidden;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-position: -170px -40px;
+    background-size: 60% 120%;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin-right: 9rem;
+  }
+  h1 {
+    text-align: left;
+  }
+  .accordion {
+    max-width: 300px;
+  }
+  .panel {
+    max-width: 30rem;
+  }
+  .illustration-woman-desktop {
+    display: block;
+    height: 300px;
+    width: 350px;
+    position: relative;
+    top: 30px;
+    left: -120px;
+  }
+  .illustration-woman-mobile {
+    display: none;
+  }
+  .accordion-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 43px;
+    margin-top: 23px;
+    margin-bottom: 20px;
+  }
+  .illustration-box {
+    display: flex;
+    z-index: 1;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    left: 60px;
+    top: 60px;
+  }
+}
